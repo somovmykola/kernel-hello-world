@@ -1,0 +1,16 @@
+#include <linux/module.h>
+#include <linux/kernel.h>
+
+static int OurInt __initdata=2;
+
+int init_module(void){
+
+
+	printk(KERN_INFO "Hello World\n");
+	return 0;
+}
+
+void cleanup_module(void){
+	printk(KERN_INFO "Goodbye Cruel World!\n");
+	return 0;
+}
